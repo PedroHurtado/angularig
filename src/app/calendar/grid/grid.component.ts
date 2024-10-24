@@ -19,6 +19,7 @@ export class GridComponent {
 
   @HostListener('click', ['$event'])
   selectedDay(ev:Event){
+    //https://dmitripavlutin.com/javascript-event-delegation/
     const node = (ev.composedPath() as HTMLElement[]).find(n=>n.dataset && 'day' in n.dataset)
     if(node){
       const {day} = node.dataset
