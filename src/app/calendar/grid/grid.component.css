@@ -1,0 +1,13 @@
+:host{
+  display: grid;
+  grid-template-columns: repeat(7,1.5rem);
+  gap: 0.5rem;
+}
+/*
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://css-tricks.com/snippets/css/complete-guide-grid/
+https://web.dev/learn/design/macro-layouts?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fdesign&hl=es-419#article-https://web.dev/learn/design/macro-layouts&hl=es-419
+https://web.dev/learn/design/micro-layouts?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fdesign&hl=es-419#article-https://web.dev/learn/design/micro-layouts&hl=es-419
+https://web.dev/patterns/layout/holy-grail?hl=en#html
+https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag
+*/
