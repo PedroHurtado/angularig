@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { GridComponent } from './calendar/grid/grid.component';
 import { TimerComponent } from './calendar/timer/timer.component';
@@ -8,7 +8,8 @@ import { TimerComponent } from './calendar/timer/timer.component';
   standalone: true,
   imports: [RouterOutlet, GridComponent, TimerComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
   name = 'pedro hurtado';
