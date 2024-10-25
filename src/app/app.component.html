@@ -1,4 +1,24 @@
 
+<app-dialog>
+  <section slot="body">
+    <p>
+      <label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select>
+    </p>
+  </section>
+  <menu slot="menu">
+    <button id="cancel" (click)="closeDialog()" type="reset">Cancel</button>
+    <button type="submit" (click)="closeDialog()" >Confirm</button>
+  </menu>
+</app-dialog>
+
+<button (click)="openDialog()">Show Dialog</button>
+
 <slot></slot>
 <app-timer></app-timer>
 <app-grid></app-grid>
