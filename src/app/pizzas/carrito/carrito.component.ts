@@ -16,8 +16,8 @@ export class CarritoComponent  {
 
   //el importe total de las pizzas
   constructor(private pubsub:PubsubService) {
-    this.pubsub.observable().subscribe(p=>{
-      this.pizzas().push(p)
+    this.pubsub.observable().subscribe(pizza=>{
+      this.pizzas().push(pizza)
       this.pizzas.set([...this.pizzas()])
     })
     //this.addPizza = this.addPizza.bind(this)

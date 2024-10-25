@@ -29,9 +29,8 @@ export class ListComponent {
       const pizza = this.pizzas.find(p=>p.id===Number(id))
       if(pizza){
         //this.emit(pizza);
-        this.pubsub.emit(pizza)
+        this.pubsub.emit(structuredClone(pizza))
       }
-
     }
   }
   private emit(pizza:Pizza){
