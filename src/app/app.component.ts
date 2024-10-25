@@ -3,11 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { GridComponent } from './calendar/grid/grid.component';
 import { TimerComponent } from './calendar/timer/timer.component';
 import { DialogComponent } from './dialog/dialog/dialog.component';
+import { ListComponent } from './pizzas/list/list.component';
+import { CarritoComponent } from './pizzas/carrito/carrito.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, GridComponent, TimerComponent, DialogComponent],
+  imports: [RouterOutlet, GridComponent, TimerComponent, DialogComponent, ListComponent, CarritoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   encapsulation: ViewEncapsulation.ShadowDom

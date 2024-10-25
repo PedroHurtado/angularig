@@ -1,0 +1,7 @@
+@for(pizza of pizzas; track pizza.id){
+  <div>
+    <div>{{pizza.name}}</div>
+    <div>{{pizza.price}}</div>
+    <button [attr.data-id]="pizza.id">añadir al carrito</button>
+  </div>
+}
