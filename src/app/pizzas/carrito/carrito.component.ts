@@ -1,5 +1,6 @@
 import { Component, computed, signal, OnDestroy } from '@angular/core';
 import { Pizza } from '../pizza';
+import { PubsubService } from '../pubsub.service';
 
 @Component({
   selector: 'app-carrito',
@@ -8,17 +9,21 @@ import { Pizza } from '../pizza';
   templateUrl: './carrito.component.html',
   styleUrl: './carrito.component.css'
 })
-export class CarritoComponent implements OnDestroy {
+export class CarritoComponent  {
 
   private pizzas = signal<Array<Pizza>>([]);
   total = computed(() => this.pizzas().map(p=>p.price).reduce((a,price)=>a+price,0))
 
   //el importe total de las pizzas
-  constructor() {
-    this.addPizza = this.addPizza.bind(this)
-    document.addEventListener('add-carrito',this.addPizza)
+  constructor(private pubsub:PubsubService) {
+    this.pubsub.observable().subscribe(p=>{
+      this.pizzas().push(p)
+      this.pizzas.set([...this.pizzas()])
+    })
+    //this.addPizza = this.addPizza.bind(this)
+    //document.addEventListener('add-carrito',this.addPizza)
   }
-  private addPizza(ev: Event) {
+  /*private addPizza(ev: Event) {
     ev.stopPropagation();
     const pizza = ((ev as CustomEvent)?.detail as Pizza)
     if (pizza) {
@@ -28,7 +33,7 @@ export class CarritoComponent implements OnDestroy {
   }
   ngOnDestroy(): void {
     document.removeEventListener('add-carrito', this.addPizza)
-  }
+  }*/
 
 }
 

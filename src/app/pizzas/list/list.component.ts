@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Pizza } from '../pizza';
+import { PubsubService } from '../pubsub.service';
 
 
 
@@ -13,6 +14,8 @@ import { Pizza } from '../pizza';
 })
 export class ListComponent {
 
+  constructor(private pubsub:PubsubService){}
+
   pizzas = Array<Pizza>(
     {id:1,name:'carbonara', price:5},
     {id:2,name:'mediaterranea', price:2},
@@ -25,7 +28,8 @@ export class ListComponent {
       const {id} = node.dataset
       const pizza = this.pizzas.find(p=>p.id===Number(id))
       if(pizza){
-        this.emit(pizza);
+        //this.emit(pizza);
+        this.pubsub.emit(pizza)
       }
 
     }
