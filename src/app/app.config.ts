@@ -10,7 +10,7 @@ export const appConfig: ApplicationConfig = {
       provideZoneChangeDetection({ eventCoalescing: true }),
       provideRouter(routes),
       {
-        provide : URL_POST, useValue:'https://my-json-server.typicode.com/typicode/demo/posts'
+        provide : URL_POST, useValue:'https://my-json-server.typicode.com/typicode/demo'
       },
       provideHttpClient(withFetch())
     ]

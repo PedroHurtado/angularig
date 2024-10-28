@@ -1,21 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject,  Injectable } from '@angular/core';
 import { URL_POST } from './posturl';
-import { Observable } from 'rxjs';
+import { lastValueFrom, Observable } from 'rxjs';
 import { Ipost } from './ipost';
 
-@Injectable({
+/*@Injectable({
   providedIn: 'root'
-})
-export class ServicepostService {
+})*/
+export class ServicepostService<T> {
 
   constructor(
     private http:HttpClient,
-    @Inject(URL_POST) private url:string
+    private url:string,
+    private path:string
   ) {
 
   }
-  get():Observable<Ipost[]>{
-    return this.http.get<Ipost[]>(this.url);
+  get():Promise<T[]>{
+    return lastValueFrom(this.http.get<T[]>(`${this.url}${this.path}`));
   }
 }

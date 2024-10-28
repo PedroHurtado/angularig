@@ -1,6 +1,11 @@
-@for(post of posts; track post.id){
-  <div>
-    <div>{{post.id}}</div>
-    <div>{{post.title}}</div>
-  </div>
+@if(spinnerState){
+  <div>Loading...</div>
+}
+@else {
+  @for(post of posts; track post.id){
+    <div>
+      <div>{{post.id}}</div>
+      <div>{{post.title}}</div>
+    </div>
+  }
 }
