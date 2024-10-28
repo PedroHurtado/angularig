@@ -5,11 +5,20 @@ import { TimerComponent } from './calendar/timer/timer.component';
 import { DialogComponent } from './dialog/dialog/dialog.component';
 import { ListComponent } from './pizzas/list/list.component';
 import { CarritoComponent } from './pizzas/carrito/carrito.component';
+import { PostlistComponent } from './post/postlist/postlist.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, GridComponent, TimerComponent, DialogComponent, ListComponent, CarritoComponent],
+  imports: [
+        RouterOutlet,
+        GridComponent,
+        TimerComponent,
+        DialogComponent,
+        ListComponent,
+        CarritoComponent,
+        PostlistComponent
+      ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   encapsulation: ViewEncapsulation.ShadowDom

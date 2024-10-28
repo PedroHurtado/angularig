@@ -1,5 +1,8 @@
+
+
 <app-list></app-list>
 <app-carrito></app-carrito>
+
 
 
 <app-dialog>
@@ -48,5 +51,10 @@
 <!--Eventos-->
 <button (click)="handlerClick()">Change Data</button>
 
+@defer (on viewport;) {
+  <app-postlist/>
+} @placeholder {
+  <div>Loading...</div>
+}
 
 
