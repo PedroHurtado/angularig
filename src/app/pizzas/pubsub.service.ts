@@ -7,7 +7,9 @@ import { Pizza } from './pizza';
 })
 export class PubsubService {
   private subject:Subject<Pizza> = new Subject<Pizza>();
-  constructor() { }
+  constructor() {
+    console.log("service");
+  }
   emit(pizza:Pizza):void{
     this.subject.next(pizza);
   }

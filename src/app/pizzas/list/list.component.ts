@@ -14,7 +14,11 @@ import { PubsubService } from '../pubsub.service';
 })
 export class ListComponent {
 
-  constructor(private pubsub:PubsubService){}
+  constructor(
+    private pubsub:PubsubService
+  ){
+    console.log("ListComponent")
+  }
 
   pizzas = Array<Pizza>(
     {id:1,name:'carbonara', price:5},
