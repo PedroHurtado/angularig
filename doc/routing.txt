@@ -3,6 +3,7 @@
         {path:'/page1' component:Page1Componet}
   1.2 RouterLink
   1.3 Router-Outlet
+  1.4 Parametros /customer/1
 2. MPA(MVC)->SSR+SSG
   Contras
       1. Mayor procesamiento de servidor

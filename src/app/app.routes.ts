@@ -11,7 +11,7 @@ export const routes: Routes = [
   {path:'page3', component:Page3Component},*/
 
   {
-    path: 'page1', loadComponent: () => import('./pages/page1/page1.component')
+    path: 'page1/:id', loadComponent: () => import('./pages/page1/page1.component')
       .then(mod => mod.Page1Component)
   },
   {
