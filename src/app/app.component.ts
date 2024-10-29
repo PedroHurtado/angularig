@@ -23,7 +23,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
       ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  encapsulation: ViewEncapsulation.ShadowDom
+  //encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
   name = 'pedro hurtado';

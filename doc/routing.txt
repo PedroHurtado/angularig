@@ -4,6 +4,8 @@
   1.2 RouterLink
   1.3 Router-Outlet
   1.4 Parametros /customer/1
+  1.5 QueryParams:"{key:value}"
+  https://medium.com/somos-pragma/desbloqueando-el-poder-de-los-guards-y-resolvers-en-angular-protegiendo-tu-aplicaci%C3%B3n-con-5996a3cd2968
 2. MPA(MVC)->SSR+SSG
   Contras
       1. Mayor procesamiento de servidor
