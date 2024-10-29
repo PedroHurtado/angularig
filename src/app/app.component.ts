@@ -6,6 +6,7 @@ import { DialogComponent } from './dialog/dialog/dialog.component';
 import { ListComponent } from './pizzas/list/list.component';
 import { CarritoComponent } from './pizzas/carrito/carrito.component';
 import { PostlistComponent } from './post/postlist/postlist.component';
+import { LayoutComponent } from './pages/layout/layout.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { PostlistComponent } from './post/postlist/postlist.component';
         DialogComponent,
         ListComponent,
         CarritoComponent,
-        PostlistComponent
+        PostlistComponent,
+        LayoutComponent
       ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

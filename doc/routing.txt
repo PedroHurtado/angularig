@@ -1,0 +1,34 @@
+1. SPA(Single page application )
+  1.1 Metainformacion para asociar un path a un componente
+        {path:'/page1' component:Page1Componet}
+  1.2 RouterLink
+  1.3 Router-Outlet
+2. MPA(MVC)->SSR+SSG
+  Contras
+      1. Mayor procesamiento de servidor
+      2. Nos obliga a hacer un despliegue de un servidor node
+      3. Hidratacion
+
+          1. paso renderiza el html+datos servicio
+          2. <script type="application/json">
+              //json
+             </script>
+
+          https://qwik.dev/docs/concepts/resumable/
+          https://www.builder.io/blog/qwik-2-coming-soon
+          https://angular.dev/guide/ssr
+          https://angular.dev/guide/prerendering
+  Pros
+      1. Mejor experiencia de usuario
+      2. Mejor gestion de memorio
+      3. SEO
+3. PWA(Progresive web app)
+    1. Service Worker(Worker con eventos)
+        1. install
+        2. activate
+        3. fetch
+
+        https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
+        https://developer.mozilla.org/es/docs/Web/API/Window/caches
+        https://developer.chrome.com/blog/beyond-spa?hl=es-419
+        https://angular.dev/ecosystem/service-workers/getting-started
