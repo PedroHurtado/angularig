@@ -1,0 +1,9 @@
+Una directiva funciona igual que un componente pero no tiene plantilla
+
+@Directive
+
+<div appDirective></div>
+
+ElemntRef->nativeElement->el elemento del dom
+
+https://angular.dev/guide/directives/attribute-directives

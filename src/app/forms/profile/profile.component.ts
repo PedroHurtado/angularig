@@ -10,6 +10,7 @@ import { InputComponent } from '../input/input.component';
   styleUrl: './profile.component.css'
 })
 //https://blog.angular-university.io/angular-custom-validators/
+//https://medium.com/@bohndez.dev/custom-form-control-con-control-value-accessor-en-angular-5-6-o-7-f8f4030f105d
 export class ProfileComponent {
   profileForm = new FormGroup({
     firstName: new FormControl('Pedro',[

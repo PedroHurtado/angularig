@@ -8,6 +8,7 @@ import { CarritoComponent } from './pizzas/carrito/carrito.component';
 import { PostlistComponent } from './post/postlist/postlist.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { ProfileComponent } from './forms/profile/profile.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { ProfileComponent } from './forms/profile/profile.component';
         CarritoComponent,
         PostlistComponent,
         LayoutComponent,
-        ProfileComponent
+        ProfileComponent,
+        HighlightDirective
       ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
