@@ -11,6 +11,7 @@ export const appConfig: ApplicationConfig = {
       provideRouter(routes),
       {
         provide : URL_POST, useValue:'https://my-json-server.typicode.com/typicode/demo'
+
       },
       provideHttpClient(withFetch())
     ]

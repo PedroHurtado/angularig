@@ -2,9 +2,9 @@ import { TestBed } from '@angular/core/testing';
 
 import { ServicepostService } from './servicepost.service';
 import { HttpClient } from '@angular/common/http';
-import { URL_POST } from './posturl';
 import { Ipost } from './ipost';
 import { of } from 'rxjs';
+import { URL_POST } from './posturl';
 
 describe('ServicepostService', () => {
 
@@ -14,11 +14,16 @@ describe('ServicepostService', () => {
 
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [
+        { provide: URL_POST, useValue: "https://my-json-server.typicode.com/typicode/demo" }
+      ]
+    });
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     service = new ServicepostService(
       httpClientSpy,
       TestBed.inject(URL_POST),
+      //"https://my-json-server.typicode.com/typicode/demo",
       "/post"
     )
   });
@@ -36,6 +41,7 @@ describe('ServicepostService', () => {
     ]
     httpClientSpy.get.and.returnValue(of(Post))
     const post = await service.get()
+    expect(post.length).toEqual(1);
 
   });
 });
