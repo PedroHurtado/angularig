@@ -1,0 +1,56 @@
+1. Cookie
+    httpOnly->document.cookie
+    secure->https
+2. Token
+    localstorage
+
+    1. Cuesta deserializar y serializar
+      JSON.parse->string->objeto
+      JSON.stringify->objeto->string
+    2. Acceso al localstorage es sincrono
+    3. no es accesible desde los worker
+
+    trabajar con la INDEXDB
+
+    1. No hay que serializar y deserializar
+    2. acceso asincrono
+    3. es accesible desde el hilo principal y desde los worker
+
+
+    const parts = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'.split('.')
+
+    atob(part[0])->json.parse
+    atob(part[1])->json.parse
+
+
+    CSP
+
+    const script = document.createElement('script')
+    script.textContent ="alert(1)"
+    ocument.head.appendChild(script)
+
+    https://www.w3.org/TR/CSP3/
+
+2. Font->Font descargo desde un recurso externo
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
+
+3. imagenes
+
+  accept:image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+
+  1. avif
+  2. webp
+
+  <picture>
+    -mobile->400*400->avif,webp,jpeg
+    -descktop->1600*1600->avif,webp,jpeg
+  </picture>
+
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture
+
+  SVG->DEBERIA EL FORMATO IDEAL PARA ICONOS
+  https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading
+
+
+

@@ -2,14 +2,18 @@ import { TestBed } from '@angular/core/testing';
 
 import { ServicepostService } from './servicepost.service';
 import { HttpClient } from '@angular/common/http';
-import { Ipost } from './ipost';
+
 import { of } from 'rxjs';
 import { URL_POST } from './posturl';
+
+interface IFoo{
+
+}
 
 describe('ServicepostService', () => {
 
 
-  let service: ServicepostService<Ipost>;
+  let service: ServicepostService<IFoo>;
   let httpClientSpy: jasmine.SpyObj<HttpClient>;
 
 
@@ -17,15 +21,14 @@ describe('ServicepostService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        { provide: URL_POST, useValue: "https://my-json-server.typicode.com/typicode/demo" }
+        { provide: URL_POST, useValue: "https://locahost:8080" }
       ]
     });
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     service = new ServicepostService(
       httpClientSpy,
       TestBed.inject(URL_POST),
-      //"https://my-json-server.typicode.com/typicode/demo",
-      "/post"
+      "/foo"
     )
   });
 
@@ -34,10 +37,8 @@ describe('ServicepostService', () => {
   });
 
   it('should be created', async () => {
-    const Post: Ipost[] = [
+    const Post: IFoo[] = [
       {
-        id: 1,
-        title: 'post 1'
       }
     ]
     httpClientSpy.get.and.returnValue(of(Post))
