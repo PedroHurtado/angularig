@@ -1,12 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Inject,  Injectable } from '@angular/core';
-import { URL_POST } from './posturl';
-import { lastValueFrom, Observable } from 'rxjs';
-import { Ipost } from './ipost';
 
-/*@Injectable({
-  providedIn: 'root'
-})*/
+import { lastValueFrom } from 'rxjs';
+
 export class ServicepostService<T> {
 
   constructor(
