@@ -1,0 +1,15 @@
+<form [formGroup]="profileForm">
+
+  <app-input Text="Introduzca el nombre"
+      [formGroup]="profileForm" name="firstName"
+  ></app-input>
+
+
+    <app-input Text="Introduzca el apellido"
+      [formGroup]="profileForm" name="lastName"
+  ></app-input>
+
+
+
+  <button type="submit" (click)="handlerClick()">Enviar datos</button>
+</form>

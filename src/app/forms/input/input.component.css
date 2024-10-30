@@ -1,0 +1,6 @@
+.control{
+  display: flex;
+  flex-direction: column;
+  max-width: max-content;
+  gap: 0.5rem;
+}
